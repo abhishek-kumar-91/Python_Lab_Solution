@@ -1,7 +1,29 @@
-def binary_to_decimal(binary_str):
-    decimal_num = int(binary_str, 2)
-    return decimal_num
+#binary to decimal function
 
+# def binaryToDecimal(binary):
+ 
+#     decimal, i = 0, 0
+#     while(binary != 0):
+#         dec = binary % 10
+#         decimal = decimal + dec * pow(2, i)
+#         binary = binary//10
+#         i += 1
+#     print(decimal)
 
-binary_input = input("Enter the binary number: ")
-binary_to_decimal(binary_input)
+# binaryInput = int(input("Enter the binary number: "))
+# binaryToDecimal(binaryInput)
+
+#decimal to binary function
+
+def decimalToBinary(n):
+ 
+    if(n > 1):
+        # divide with integral result
+        # (discard remainder)
+        decimalToBinary(n//2)
+ 
+     
+    print(n%2, end=' ')
+
+decimalInput = int(input("Enter the decimal number: "))
+decimalToBinary(decimalInput)
